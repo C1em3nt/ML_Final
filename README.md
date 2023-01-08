@@ -33,4 +33,4 @@ You can download pretrained models here:
 
 ## Results
 
-![image](https://github.com/C1em3nt/ML_Final_Project/blob/d14eb0e37b72d56d17044af733355278525eeda9/score.png)
+![image](https://github.com/C1em3nt/ML_Final/blob/ba301370253dafad953a92534f209c87eb217c04/model/score.png)
