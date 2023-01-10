@@ -52,13 +52,13 @@ def prepreprocessing(train, test):
     #print(c.iloc[0,0][:])
     #first 4 correlation between two measurements(first 8 in c) in each product_codes 
     for i in range(8):
-        measurement_col = tot_corr.iloc[i,0][:] # we select the next best correlated column 
+        measurement_col = tot_corr.iloc[i,0][:]
         impute ={}
         for x in data.product_code.unique() : 
             corr = np.absolute(data[data.product_code == x].drop(cols, axis=1).corr()[measurement_col]).sort_values(ascending=False)
-            measurement_col_dic = {}
-            measurement_col_dic[measurement_col] = corr[1:5].index.tolist()
-            impute[x] = measurement_col_dic[measurement_col]
+            measurement = {}
+            measurement[measurement_col] = corr[1:5].index.tolist()
+            impute[x] = measurement[measurement_col]
         full_impute[measurement_col] =impute
     #print(full_impute)
     
